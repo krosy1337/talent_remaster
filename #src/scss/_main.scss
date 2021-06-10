@@ -1,0 +1,43 @@
+.main {
+	flex-grow: 1;
+
+	padding: 30px;
+
+	&__inner {
+		max-width: 1244px;
+		height: 1300px;
+
+		margin: 0 auto;
+
+		position: relative;
+
+
+	}
+
+	&__bg-figure {
+		position: absolute;
+
+		display: block;
+
+		z-index: -1;
+
+		pointer-events: none;
+
+		user-select: none;
+
+		&_1 {
+			top: 0;
+			left: 0;
+		}
+
+		&_2 {
+			right: 0;
+			top: 557px;
+		}
+
+		&_3 {
+			left: 0;
+			top: 1000px;
+		}
+	}
+}

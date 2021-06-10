@@ -1,0 +1,18 @@
+body {
+	background-color: var(--color-bg);
+}
+
+.container {
+	max-width: 1017px;
+
+	padding: 0 15px;
+
+	margin: 0 auto;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+
+	min-height: 100vh;
+}

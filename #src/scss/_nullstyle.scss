@@ -1,0 +1,30 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+	color: inherit;
+}
+
+img {
+	max-width: 100%;
+}
+
+button {
+	&,
+	&:focus,
+	&:active {
+		border: none;
+		outline: none;
+	}
+}

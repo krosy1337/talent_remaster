@@ -1,0 +1,66 @@
+.menu-btn {
+	@include adaptive-value('padding-top', 13, 5);
+	@include adaptive-value('padding-bottom', 13, 5);
+	@include adaptive-value('padding-left', 17, 7);
+	@include adaptive-value('padding-right', 17, 7);
+
+	display: flex;
+	align-items: center;
+
+	column-gap: 13px;
+
+	background-color: transparent;
+
+	&__user {
+		display: flex;
+		align-items: center;
+
+		column-gap: 20px;
+
+		&-avatar {
+			display: inline-block;
+
+			position: relative;
+
+			width: 40px;
+			height: 40px;
+
+			&-medal {
+				position: absolute;
+				top: 25px;
+				right: 0;
+
+				width: 20px;
+				height: 27px;
+			}
+		}
+
+		&-name {
+			font-family: "Play", sans-serif;
+
+			font-size: 22px;
+			line-height: 25px;
+
+			color: var(--color-1c);
+		}
+	}
+	&__arrow {
+		position: relative;
+		top: 2px;
+	}
+}
+
+.logo {
+	display: flex;
+	align-items: center;
+
+	column-gap: 13px;
+
+	&__text {
+		font-family: "Play", sans-serif;
+
+		font-size: 23px;
+
+		color: var(--color-1c);
+	}
+}
