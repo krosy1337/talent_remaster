@@ -2,6 +2,10 @@ html.light-theme {
   --color-bg: #f8fcfd;
   --color-1c: #1c1c1c;
   --color-ff: #ffffff;
+  --color-44: #444444;
+  --color-c4: #c4c4c4;
+  --color-00: #000000;
+  --color-5e: #5e5e5e;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -480,6 +484,7 @@ button:active {
      -moz-column-gap: 13px;
           column-gap: 13px;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .menu-btn__user {
@@ -521,6 +526,10 @@ button:active {
   top: 2px;
 }
 
+.menu-btn__arrow path {
+  fill: var(--color-1c);
+}
+
 .logo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -537,6 +546,69 @@ button:active {
   font-family: "Play", sans-serif;
   font-size: 23px;
   color: var(--color-1c);
+}
+
+.user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 25px;
+     -moz-column-gap: 25px;
+          column-gap: 25px;
+}
+
+.user__avatar {
+  position: relative;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.user__avatar-image {
+  width: 64px;
+  height: 64px;
+}
+
+.user__avatar-medal {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  width: 20px;
+  height: 27px;
+}
+
+.user__info {
+  color: var(--color-1c);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 10px;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+}
+
+.user__name,
+.user__talent-id {
+  color: inherit;
+  font-size: 20px;
+  overflow: hidden;
+  max-width: 180px;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+
+.user__logout {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  cursor: pointer;
 }
 
 body {
@@ -630,6 +702,131 @@ body {
   top: 1000px;
 }
 
+.side {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: var(--color-ff);
+  padding-top: 108px;
+  padding-left: 40px;
+  padding-right: 40px;
+  height: 100%;
+  border-radius: 0 15px 0 0;
+  font-family: "Play", sans-serif;
+  width: 380px;
+  overflow: auto;
+}
+
+.side__user {
+  margin-bottom: 50px;
+}
+
+.side__arrow {
+  position: absolute;
+  top: 28px;
+  right: 33px;
+  -webkit-transform: rotate(180deg) scale(1);
+      -ms-transform: rotate(180deg) scale(1);
+          transform: rotate(180deg) scale(1);
+  cursor: pointer;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.side__arrow path {
+  fill: var(--color-1c);
+}
+
+.side__arrow:hover {
+  -webkit-transform: rotate(180deg) scale(1.2);
+      -ms-transform: rotate(180deg) scale(1.2);
+          transform: rotate(180deg) scale(1.2);
+}
+
+.side__block {
+  font-family: Inter, sans-serif;
+}
+
+.side__block-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
+}
+
+.side__block-title {
+  color: var(--color-44);
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.side__accounts-arrow path {
+  fill: var(--color-44);
+}
+
+.side__account {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 17px;
+     -moz-column-gap: 17px;
+          column-gap: 17px;
+  padding: 13px 0;
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+.side__account-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 6px;
+}
+
+.side__account-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-00);
+}
+
+.side__account-id {
+  font-family: Play, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-5e);
+}
+
+.side__account-name,
+.side__account-id {
+  overflow: hidden;
+  max-width: 145px;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+
+.side__account-exit {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-left: auto;
+}
+
 .footer {
   height: 100px;
   width: 100%;
@@ -654,7 +851,7 @@ body {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 425px) {
   .header__menu-btn .menu-btn__user-name {
     display: none;
   }

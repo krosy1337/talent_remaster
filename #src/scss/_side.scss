@@ -1,0 +1,127 @@
+.side {
+	position: fixed;
+	left: 0;
+	top: 0;
+
+	background-color: var(--color-ff);
+
+	padding-top: 108px;
+	padding-left: 40px;
+	padding-right: 40px;
+
+	height: 100%;
+
+	border-radius: 0 15px 0 0;
+
+	font-family: "Play", sans-serif;
+
+	width: 380px;
+
+	overflow: auto;
+
+	&__user {
+		margin-bottom: 50px;
+	}
+
+	&__arrow {
+		position: absolute;
+		top: 28px;
+		right: 33px;
+
+		transform: rotate(180deg) scale(1);
+
+		path {
+			fill: var(--color-1c);
+		}
+
+		cursor: pointer;
+
+		transition: .3s;
+
+		&:hover {
+			transform: rotate(180deg) scale(1.2);
+		}
+	}
+
+	&__block {
+		font-family: Inter, sans-serif;
+
+		&-header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			margin-bottom: 40px;
+		}
+
+		&-title {
+			color: var(--color-44);
+
+			margin: 0;
+			padding: 0;
+
+			font-size: 24px;
+			font-weight: 400;
+		}
+	}
+
+	&__accounts {
+		&-arrow {
+			path {
+				fill: var(--color-44);
+			}
+		}
+	}
+
+	&__account {
+		display: flex;
+		align-items: center;
+		column-gap: 17px;
+
+		padding: 13px 0;
+
+		padding-left: 10px;
+
+		padding-right: 20px;
+
+		&-info {
+			display: flex;
+			flex-direction: column;
+
+			row-gap: 6px;
+		}
+
+		&-name {
+			font-size: 14px;
+			font-weight: 700;
+
+			color: var(--color-00);
+		}
+
+		&-id {
+			font-family: Play, sans-serif;
+
+			font-size: 14px;
+			font-weight: 400;
+
+			color: var(--color-5e);
+		}
+
+		&-name,
+		&-id {
+			overflow: hidden;
+
+			max-width: 145px;
+
+			white-space: nowrap;
+
+			text-overflow: ellipsis;
+		}
+
+		&-exit {
+			flex-shrink: 0;
+
+			margin-left: auto;
+		}
+	}
+}

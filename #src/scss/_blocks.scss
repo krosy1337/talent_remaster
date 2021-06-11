@@ -11,6 +11,8 @@
 
 	background-color: transparent;
 
+	cursor: pointer;
+
 	&__user {
 		display: flex;
 		align-items: center;
@@ -47,6 +49,10 @@
 	&__arrow {
 		position: relative;
 		top: 2px;
+
+		path {
+			fill: var(--color-1c);
+		}
 	}
 }
 
@@ -62,5 +68,64 @@
 		font-size: 23px;
 
 		color: var(--color-1c);
+	}
+}
+
+.user {
+	display: flex;
+	align-items: center;
+
+	column-gap: 25px;
+
+	&__avatar {
+		position: relative;
+
+		flex-shrink: 0;
+
+		&-image {
+			width: 64px;
+			height: 64px;
+		}
+
+		&-medal {
+			position: absolute;
+			right: 0;
+			top: 40px;
+
+			width: 20px;
+			height: 27px;
+		}
+	}
+
+	&__info {
+		color: var(--color-1c);
+
+		display: flex;
+		flex-direction: column;
+
+		row-gap: 10px;
+
+		flex-grow: 0;
+	}
+
+	&__name,
+	&__talent-id {
+		color: inherit;
+
+		font-size: 20px;
+
+		overflow: hidden;
+
+		max-width: 180px;
+
+		white-space: nowrap;
+
+		text-overflow: ellipsis;
+	}
+
+	&__logout {
+		flex-shrink: 0;
+
+		cursor: pointer;
 	}
 }
