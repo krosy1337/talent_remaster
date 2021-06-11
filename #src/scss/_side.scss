@@ -1,13 +1,15 @@
 .side {
 	position: fixed;
-	left: 0;
+	left: -100%;
 	top: 0;
 
 	background-color: var(--color-ff);
 
 	padding-top: 108px;
-	padding-left: 40px;
-	padding-right: 40px;
+	padding-bottom: 40px;
+
+	@include adaptive-value('padding-left', 40, 20);
+	@include adaptive-value('padding-right', 40, 20);
 
 	height: 100%;
 
@@ -15,9 +17,17 @@
 
 	font-family: "Play", sans-serif;
 
-	width: 380px;
+	max-width: 380px;
 
 	overflow: auto;
+
+	z-index: 1;
+
+	transition: .3s;
+
+	&.active {
+		left: 0;
+	}
 
 	&__user {
 		margin-bottom: 50px;
@@ -46,6 +56,10 @@
 	&__block {
 		font-family: Inter, sans-serif;
 
+		& + & {
+			margin-top: 30px;
+		}
+
 		&-header {
 			display: flex;
 			justify-content: space-between;
@@ -66,6 +80,7 @@
 	}
 
 	&__accounts {
+		padding: 13px 0;
 		&-arrow {
 			path {
 				fill: var(--color-44);
@@ -123,5 +138,12 @@
 
 			margin-left: auto;
 		}
+	}
+
+	&__shares {
+		display: flex;
+		align-items: center;
+
+		column-gap: 20px;
 	}
 }

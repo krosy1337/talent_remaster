@@ -75,7 +75,7 @@
 	display: flex;
 	align-items: center;
 
-	column-gap: 25px;
+	@include adaptive-value('column-gap', 25, 10);
 
 	&__avatar {
 		position: relative;

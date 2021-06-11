@@ -632,6 +632,25 @@ body {
   min-height: 100vh;
 }
 
+.layout {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.layout.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 .header {
   width: 100%;
   background-color: var(--color-ff);
@@ -704,17 +723,26 @@ body {
 
 .side {
   position: fixed;
-  left: 0;
+  left: -100%;
   top: 0;
   background-color: var(--color-ff);
   padding-top: 108px;
+  padding-bottom: 40px;
   padding-left: 40px;
   padding-right: 40px;
   height: 100%;
   border-radius: 0 15px 0 0;
   font-family: "Play", sans-serif;
-  width: 380px;
+  max-width: 380px;
   overflow: auto;
+  z-index: 1;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.side.active {
+  left: 0;
 }
 
 .side__user {
@@ -748,6 +776,10 @@ body {
   font-family: Inter, sans-serif;
 }
 
+.side__block + .side__block {
+  margin-top: 30px;
+}
+
 .side__block-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -767,6 +799,10 @@ body {
   padding: 0;
   font-size: 24px;
   font-weight: 400;
+}
+
+.side__accounts {
+  padding: 13px 0;
 }
 
 .side__accounts-arrow path {
@@ -827,6 +863,18 @@ body {
   margin-left: auto;
 }
 
+.side__shares {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+}
+
 .footer {
   height: 100px;
   width: 100%;
@@ -848,6 +896,20 @@ body {
 
   .menu-btn {
     padding-right: calc(7px + 10 * ((100vw - 320px) / 697));
+  }
+
+  .user {
+    -webkit-column-gap: calc(10px + 15 * ((100vw - 320px) / 697));
+       -moz-column-gap: calc(10px + 15 * ((100vw - 320px) / 697));
+            column-gap: calc(10px + 15 * ((100vw - 320px) / 697));
+  }
+
+  .side {
+    padding-left: calc(20px + 20 * ((100vw - 320px) / 697));
+  }
+
+  .side {
+    padding-right: calc(20px + 20 * ((100vw - 320px) / 697));
   }
 }
 
