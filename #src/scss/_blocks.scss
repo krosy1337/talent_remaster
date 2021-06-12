@@ -60,7 +60,9 @@
 	display: flex;
 	align-items: center;
 
-	column-gap: 13px;
+	&__image {
+		margin-right: 13px;
+	}
 
 	&__text {
 		font-family: "Play", sans-serif;
@@ -75,7 +77,13 @@
 	display: flex;
 	align-items: center;
 
-	@include adaptive-value('column-gap', 25, 10);
+	@include adaptive-value('margin-left', -12.5, -5);
+	@include adaptive-value('margin-right', -12.5, -5);
+
+	&__el {
+		@include adaptive-value('margin-left', 12.5, 5);
+		@include adaptive-value('margin-right', 12.5, 5);
+	}
 
 	&__avatar {
 		position: relative;
@@ -103,8 +111,6 @@
 		display: flex;
 		flex-direction: column;
 
-		row-gap: 10px;
-
 		flex-grow: 0;
 	}
 
@@ -121,6 +127,10 @@
 		white-space: nowrap;
 
 		text-overflow: ellipsis;
+	}
+
+	&__name {
+		margin-bottom: 10px;
 	}
 
 	&__logout {
