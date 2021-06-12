@@ -1,5 +1,9 @@
 body {
 	background-color: var(--color-bg);
+	
+	&.lock {
+		overflow: hidden;
+	}
 }
 
 .container {

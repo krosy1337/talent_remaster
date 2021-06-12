@@ -7,8 +7,6 @@
 	display: flex;
 	align-items: center;
 
-	column-gap: 13px;
-
 	background-color: transparent;
 
 	cursor: pointer;
@@ -17,7 +15,7 @@
 		display: flex;
 		align-items: center;
 
-		column-gap: 20px;
+		margin-right: 15px;
 
 		&-avatar {
 			display: inline-block;
@@ -26,6 +24,8 @@
 
 			width: 40px;
 			height: 40px;
+
+			margin-right: 20px;
 
 			&-medal {
 				position: absolute;
