@@ -6,6 +6,7 @@ html.light-theme {
   --color-c4: #c4c4c4;
   --color-00: #000000;
   --color-5e: #5e5e5e;
+  --color-f5: #f5f5f5;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -627,6 +628,9 @@ button:active {
   padding: 12px 20px;
   color: var(--color-ff);
   font-family: Play, sans-serif;
+  position: relative;
+  z-index: -2;
+  overflow: hidden;
 }
 
 .general-stats__title {
@@ -635,6 +639,36 @@ button:active {
   margin: 0;
   padding: 0;
   color: inherit;
+  margin-bottom: 5px;
+}
+
+.general-stats__text-stat {
+  color: var(--color-f5);
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+.general-stats__score {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 22px;
+  color: inherit;
+}
+
+.general-stats__dark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.dark {
+  background-color: rgba(0, 0, 0, 0.32);
 }
 
 body {
@@ -728,7 +762,7 @@ body.lock {
 .main__bg-figure {
   position: absolute;
   display: block;
-  z-index: -1;
+  z-index: -3;
   pointer-events: none;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -907,6 +941,10 @@ body.lock {
 
 .side__share-btn {
   margin: 0 10px;
+}
+
+.content {
+  padding-top: 60px;
 }
 
 .footer {
