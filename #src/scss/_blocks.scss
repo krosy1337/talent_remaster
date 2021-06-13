@@ -44,6 +44,11 @@
 			line-height: 25px;
 
 			color: var(--color-1c);
+
+			max-width: 220px;
+
+			text-overflow: ellipsis;
+			overflow: hidden;
 		}
 	}
 	&__arrow {
@@ -137,5 +142,30 @@
 		flex-shrink: 0;
 
 		cursor: pointer;
+	}
+}
+
+.general-stats {
+	background-image: url('../img/generalStat.jpg');
+	background-repeat: no-repeat;
+
+	height: 210px;
+
+	border-radius: 8px;
+
+	padding: 12px 20px;
+
+	color: var(--color-ff);
+
+	font-family: Play, sans-serif;
+
+	&__title {
+		font-size: 24px;
+		font-weight: 700;
+
+		margin: 0;
+		padding: 0;
+
+		color: inherit;
 	}
 }

@@ -515,6 +515,10 @@ button:active {
   font-size: 22px;
   line-height: 25px;
   color: var(--color-1c);
+  max-width: 220px;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .menu-btn__arrow {
@@ -613,6 +617,24 @@ button:active {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   cursor: pointer;
+}
+
+.general-stats {
+  background-image: url("../img/generalStat.jpg");
+  background-repeat: no-repeat;
+  height: 210px;
+  border-radius: 8px;
+  padding: 12px 20px;
+  color: var(--color-ff);
+  font-family: Play, sans-serif;
+}
+
+.general-stats__title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+  color: inherit;
 }
 
 body {
@@ -940,3 +962,5 @@ body.lock {
     display: none;
   }
 }
+
+.webp .general-stats { background-image: url(../img/generalStat.webp); }
