@@ -648,6 +648,18 @@ button:active {
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.45);
 }
 
+.general-stats__header-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .general-stats__title {
   font-size: 24px;
   font-weight: 700;
@@ -666,11 +678,9 @@ button:active {
 }
 
 .general-stats__score {
-  position: absolute;
-  top: 30px;
-  right: 40px;
   font-size: 22px;
   color: inherit;
+  white-space: nowrap;
 }
 
 .general-stats__dark {
@@ -1192,14 +1202,6 @@ body.lock {
 
   .user__el {
     margin-right: calc(5px + 7.5 * ((100vw - 320px) / 697));
-  }
-
-  .general-stats__score {
-    top: calc(5px + 25 * ((100vw - 320px) / 697));
-  }
-
-  .general-stats__score {
-    right: calc(10px + 30 * ((100vw - 320px) / 697));
   }
 
   .side {

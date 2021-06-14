@@ -177,6 +177,12 @@
 		background-color: rgba(0, 0, 0, .32);
 
 		box-shadow: 0 0 4px rgba(0, 0, 0, 0.45);
+
+		&-top {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
 	}
 
 	&__title {
@@ -202,13 +208,11 @@
 	}
 
 	&__score {
-		position: absolute;
-		@include adaptive-value('top', 30, 5);
-		@include adaptive-value('right', 40, 10);
-
 		font-size: 22px;
 
 		color: inherit;
+
+		white-space: nowrap;
 	}
 
 	&__dark {
