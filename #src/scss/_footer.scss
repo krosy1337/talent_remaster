@@ -1,6 +1,153 @@
 .footer {
-	height: 100px;
-	width: 100%;
+	background-color: #0E1D27;
+	min-height: 180px;
+	font-family: 'Inter', sans-serif;
 
-	background-color: #ff0000;
+	&__container {
+		min-height: 80px;
+
+		display: flex;
+		align-items: center;
+	}
+
+	&__top {
+		border-bottom: #464646 1px solid;
+	}
+	&__kruzhok-links {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	&__kruzhok-link {
+		height: 100%;
+		display: flex;
+		align-items: center;
+	}
+	&__kruzhok-links a {
+		margin-left: 10px;
+		text-decoration: none;
+		font-size: 12px;
+		color: #BFBFBF;
+		font-family: 'Play', sans-serif;
+	}
+	&__links {
+		margin: 0 -20px;
+		height: 100%;
+		display: flex;
+		align-items: center;
+
+	}
+
+	&__links a{
+		font-size: 18px;
+		margin: 0 15px;
+
+		display: inline-block;
+		position: relative;
+
+	}
+
+	&:first-child {
+		padding: 0;
+	}
+	&__links a:before,
+	&__links a:after {
+		content: "";
+		width: 50%;
+		height: 2px;
+		background-color: #bfbfbf;
+		display: block;
+		position: absolute;
+		bottom: -1px;
+		transition: 0.3s;
+	}
+	&__links a:after {
+		right: 0;
+	}
+	&__links a:hover {
+		color: #fff;
+	}
+	&__links a:hover:after, &__links a:hover:before{
+		width: 0;
+		background-color: #fff;
+
+	}
+
+	&__bot-inner {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		flex-wrap: wrap-reverse;
+		align-items: center;
+	}
+	&__socials{
+		margin: 20px 0;
+	}
+	&__socials a:first-child {
+		margin-bottom: 20px;
+	}
+	&__socials a:last-child {
+		margin-top: 20px;
+	}
+	&__socials a{
+		display: flex;
+		align-items: center;
+	}
+	&__socials span {
+		margin-left: 10px;
+	}
+	&__socials a {
+		font-size: 12px;
+		color: #bfbfbf;
+		text-decoration: none;
+	}
+	&__contacts-title{
+		font-size: 16px;
+		font-family: 'Play', sans-serif;
+		margin-bottom: 18px;
+	}
+	&__contacts {
+		font-size: 12px;
+		color: #bfbfbf;
+		text-decoration: none;
+		margin: 20px 0%;
+	}
+	&__contacts-inner a {
+		font-size: 12px;
+		color: #bfbfbf;
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+	}
+	&__contacts-inner span {
+		margin-left: 10px;
+	}
+}
+
+
+
+
+@media (max-width: 767px) {
+	.footer {
+		&__kruzhok-links {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		&__links {
+			flex-direction: row;
+			margin: 10px 0 20px 0;
+			align-items: flex-start;
+			flex-wrap: wrap;
+		}
+		&__links a{
+			margin: 0 70px 15px 0
+		}
+		&__kruzhok-link {
+			margin: 20px 0 15px;
+		}
+	}
+
 }
