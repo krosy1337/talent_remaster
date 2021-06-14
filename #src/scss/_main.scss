@@ -1,7 +1,7 @@
 .main {
 	flex-grow: 1;
 
-	padding: 30px;
+	padding-top: 30px;
 
 	&__inner {
 		max-width: 1244px;
@@ -10,8 +10,6 @@
 		margin: 0 auto;
 
 		position: relative;
-
-
 	}
 
 	&__bg-figure {

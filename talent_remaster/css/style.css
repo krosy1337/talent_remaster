@@ -783,7 +783,7 @@ body.lock {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  padding: 30px;
+  padding-top: 30px;
 }
 
 .main__inner {
@@ -1192,6 +1192,14 @@ body.lock {
 
   .user__el {
     margin-right: calc(5px + 7.5 * ((100vw - 320px) / 697));
+  }
+
+  .general-stats__score {
+    top: calc(5px + 25 * ((100vw - 320px) / 697));
+  }
+
+  .general-stats__score {
+    right: calc(10px + 30 * ((100vw - 320px) / 697));
   }
 
   .side {
