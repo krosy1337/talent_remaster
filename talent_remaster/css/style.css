@@ -1060,6 +1060,8 @@ body.lock {
   list-style: none;
   color: #fff;
   font-family: Raleway, sans-serif;
+  padding: 0;
+  margin: 0;
 }
 
 .game-card__stat {
