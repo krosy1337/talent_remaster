@@ -470,6 +470,14 @@ button:active {
   font-style: normal;
 }
 
+.dark {
+  background-color: rgba(0, 0, 0, 0.32);
+}
+
+.toner {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .menu-btn {
   padding-top: 13px;
   padding-bottom: 13px;
@@ -623,14 +631,21 @@ button:active {
 .general-stats {
   background-image: url("../img/generalStat.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
   height: 210px;
   border-radius: 8px;
-  padding: 12px 20px;
   color: var(--color-ff);
   font-family: Play, sans-serif;
   position: relative;
   z-index: -2;
   overflow: hidden;
+}
+
+.general-stats__header {
+  padding: 12px 20px;
+  background-color: rgba(0, 0, 0, 0.32);
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.45);
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.45);
 }
 
 .general-stats__title {
@@ -667,8 +682,27 @@ button:active {
   z-index: -1;
 }
 
-.dark {
-  background-color: rgba(0, 0, 0, 0.32);
+.general-stats__marker {
+  width: 4px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 2px;
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.general-stats__toner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 body {
@@ -680,7 +714,7 @@ body.lock {
 }
 
 .container {
-  max-width: 1017px;
+  max-width: 1030px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -951,6 +985,7 @@ body.lock {
   background-color: #0E1D27;
   min-height: 180px;
   font-family: 'Inter', sans-serif;
+  overflow: hidden;
 }
 
 .footer__container {

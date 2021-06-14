@@ -1,3 +1,11 @@
+.dark {
+	background-color: rgba(0, 0, 0, .32);
+}
+
+.toner {
+	background-color: rgba(0, 0, 0, .5);
+}
+
 .menu-btn {
 	@include adaptive-value('padding-top', 13, 5);
 	@include adaptive-value('padding-bottom', 13, 5);
@@ -148,12 +156,11 @@
 .general-stats {
 	background-image: url('../img/generalStat.jpg');
 	background-repeat: no-repeat;
+	background-size: cover;
 
 	height: 210px;
 
 	border-radius: 8px;
-
-	padding: 12px 20px;
 
 	color: var(--color-ff);
 
@@ -163,6 +170,14 @@
 
 	z-index: -2;
 	overflow: hidden;
+
+	&__header {
+		padding: 12px 20px;
+
+		background-color: rgba(0, 0, 0, .32);
+
+		box-shadow: 0 0 4px rgba(0, 0, 0, 0.45);
+	}
 
 	&__title {
 		font-size: 24px;
@@ -205,8 +220,33 @@
 
 		z-index: -1;
 	}
-}
 
-.dark {
-	background-color: rgba(0, 0, 0, .32);
+	&__marker {
+		width: 4px;
+
+		height: 50px;
+
+		background-color: #fff;
+
+		border-radius: 2px;
+
+		position: absolute;
+
+		left: 0;
+		bottom: -7px;
+
+		transform: translateX(-50%);
+	}
+
+	&__toner {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		z-index: -1;
+
+		background-color: rgba(0, 0, 0, .4);
+	}
 }
