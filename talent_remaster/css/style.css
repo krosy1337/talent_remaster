@@ -476,6 +476,16 @@ button:active {
 
 .toner {
   background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.inter {
+  font-family: Inter, sans-serif;
 }
 
 .menu-btn {
@@ -632,6 +642,7 @@ button:active {
   background-image: url("../img/generalStat.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   height: 210px;
   border-radius: 8px;
   color: var(--color-ff);
@@ -639,6 +650,7 @@ button:active {
   position: relative;
   z-index: -2;
   overflow: hidden;
+  margin-bottom: 55px;
 }
 
 .general-stats__header {
@@ -696,21 +708,16 @@ button:active {
   width: 4px;
   height: 50px;
   background-color: #fff;
-  border-radius: 2px;
+  border-radius: 2px 2px 0 0;
   position: absolute;
   left: 0;
-  bottom: -7px;
+  bottom: 0;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
 }
 
 .general-stats__toner {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   z-index: -1;
   background-color: rgba(0, 0, 0, 0.4);
 }
@@ -991,6 +998,83 @@ body.lock {
   padding-top: 60px;
 }
 
+.game-card {
+  min-height: 325px;
+  background-image: url("../img/csBg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: -2;
+  position: relative;
+}
+
+.game-card__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.32);
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.45);
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.45);
+  padding: 15px;
+  font-family: Raleway, sans-serif;
+  color: #fff;
+}
+
+.game-card__text-score {
+  font-size: 18px;
+}
+
+.game-card__score {
+  font-size: 20px;
+}
+
+.game-card__refresh {
+  background-color: transparent;
+  color: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+}
+
+.game-card__refresh-text {
+  margin-right: 15px;
+}
+
+.game-card__body {
+  padding: 5px 30px;
+}
+
+.game-card__list {
+  list-style: none;
+  color: #fff;
+  font-family: Raleway, sans-serif;
+}
+
+.game-card__stat {
+  font-size: 18px;
+  color: inherit;
+}
+
+.game-card__stat + .game-card__stat {
+  margin-top: 25px;
+}
+
+.game-card__value {
+  font-weight: 700;
+}
+
 .footer {
   background-color: #0E1D27;
   min-height: 180px;
@@ -1253,3 +1337,5 @@ body.lock {
 }
 
 .webp .general-stats { background-image: url(../img/generalStat.webp); }
+
+.webp .game-card { background-image: url(../img/csBg.webp); }

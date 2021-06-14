@@ -1,7 +1,86 @@
 .content {
 	padding-top: 60px;
 
-	&__container {
-		//padding: 0;
+}
+
+.game-card {
+	min-height: 325px;
+
+	background-image: url('../img/csBg.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	border-radius: 8px;
+
+	overflow: hidden;
+
+	z-index: -2;
+
+	position: relative;
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		background-color: rgba(0, 0, 0, .32);
+
+		box-shadow: 0 0 4px rgba(0, 0, 0, 0.45);
+
+		padding: 15px;
+
+		font-family: Raleway, sans-serif;
+
+		color: #fff;
+	}
+
+	&__text-score {
+		font-size: 18px;
+	}
+
+	&__score {
+		font-size: 20px;
+	}
+
+	&__refresh {
+		background-color: transparent;
+
+		color: inherit;
+
+		display: flex;
+		align-items: center;
+
+		font-size: 18px;
+
+		&-text {
+			margin-right: 15px;
+		}
+	}
+
+	&__body {
+		padding: 5px 30px;
+	}
+
+	&__list {
+		list-style: none;
+
+		color: #fff;
+
+		font-family: Raleway, sans-serif;
+	}
+
+	&__stat {
+		font-size: 18px;
+
+		color: inherit;
+
+		& + & {
+			margin-top: 25px;
+		}
+	}
+
+	&__value {
+		font-weight: 700;
 	}
 }
