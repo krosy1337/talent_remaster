@@ -34,18 +34,21 @@ function startSide() {
 			this.removeEventListener('click', exitHandler)
 		}
 
-		menuBtn.addEventListener('click', () => {
-			side.classList.add('active')
-			layout.classList.add('active')
-			const scrollWidth = getScrollWidth()
+		menuBtn.addEventListener('click', event => {
+			if (!event.target.closest('.tooltip')) {
+				side.classList.add('active')
+				layout.classList.add('active')
+				const scrollWidth = getScrollWidth()
 
-			side.addEventListener('transitionend', () => {
-				document.body.classList.add('lock')
-				document.body.style.paddingRight = `${scrollWidth}px`
-			})
+				side.addEventListener('transitionend', () => {
+					document.body.classList.add('lock')
+					document.body.style.paddingRight = `${scrollWidth}px`
+				})
 
-			sideArrow.addEventListener('click', exitHandler)
-			layout.addEventListener('click', exitHandler)
+				sideArrow.addEventListener('click', exitHandler)
+				layout.addEventListener('click', exitHandler)
+			}
+
 		})
 	}
 }

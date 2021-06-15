@@ -1554,6 +1554,10 @@ body.lock {
     margin-right: calc(5px + 7.5 * ((100vw - 320px) / 697));
   }
 
+  .tooltip__inner {
+    width: calc(220px + 140 * ((100vw - 320px) / 697));
+  }
+
   .side {
     padding-left: calc(20px + 20 * ((100vw - 320px) / 697));
   }
