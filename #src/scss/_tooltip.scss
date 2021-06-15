@@ -4,16 +4,11 @@
 
 .tooltip__content {
 	position: absolute;
-	left: 200%;
+	left: -15px;
 	top: 100%;
-	-webkit-transform: translateX(-50%);
-	-ms-transform: translateX(-50%);
-	transform: translateX(-50%);
-	padding-top: 5px;
+	padding-top: 10px;
 	opacity: 0;
 	visibility: hidden;
-	-webkit-transition: 0.3s;
-	-o-transition: 0.3s;
 	transition: 0.3s;
 
 	z-index: 1;
@@ -55,6 +50,18 @@
 	border-radius: 11px;
 
 	width: 360px;
+}
+
+.tooltip__inner:before {
+	content: "";
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 10px 10px 10px;
+	border-color: transparent transparent #fff transparent;;
+	position: absolute;
+	top: 0;
+	left: 15px;
 }
 
 .tooltip__row {
