@@ -56,13 +56,15 @@
 			margin-right: 20px;
 
 			&-medal {
-				position: absolute;
-				top: 25px;
-				right: 0;
-
 				width: 20px;
 				height: 27px;
 			}
+		}
+
+		&-tooltip {
+			position: absolute;
+			top: 25px;
+			right: 0;
 		}
 
 		&-name {
