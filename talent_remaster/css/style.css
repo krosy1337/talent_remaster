@@ -1305,6 +1305,7 @@ body.lock {
       -ms-flex-align: center;
           align-items: center;
   font-size: 18px;
+  padding: 0;
 }
 
 .game-card__btn-text {
