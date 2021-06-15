@@ -1285,11 +1285,6 @@ body.lock {
   padding: 15px;
   font-family: Raleway, sans-serif;
   color: #fff;
-  margin: 0 -10px;
-}
-
-.game-card__header-item {
-  margin: 0 10px;
 }
 
 .game-card__text-score {
