@@ -21,7 +21,6 @@ function startSide() {
 		const menuBtn = document.querySelector('.menu-btn')
 		const layout = document.querySelector('.layout')
 		const sideArrow = document.querySelector('.side__arrow')
-		const scrollWidth = getScrollWidth()
 
 		function exitHandler() {
 			side.classList.remove('active')
@@ -38,6 +37,7 @@ function startSide() {
 		menuBtn.addEventListener('click', () => {
 			side.classList.add('active')
 			layout.classList.add('active')
+			const scrollWidth = getScrollWidth()
 
 			side.addEventListener('transitionend', () => {
 				document.body.classList.add('lock')

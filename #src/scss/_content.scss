@@ -4,9 +4,6 @@
 }
 
 .game-card {
-	min-height: 325px;
-
-	background-image: url('../img/csBg.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -19,10 +16,36 @@
 
 	position: relative;
 
+	& + & {
+		margin-top: 55px;
+	}
+
+	&_cs {
+		background-image: url('../img/csBg.jpg');
+	}
+
+	&_dota {
+		background-image: url('../img/dotaBg.jpg');
+	}
+
+	&_overwatch {
+		background-image: url('../img/dotaBg.jpg');
+	}
+
+	&__icon-wrapper {
+		width: 80px;
+		height: 45px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
 	&__header {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		flex-wrap: wrap;
 
 		background-color: rgba(0, 0, 0, .32);
 
@@ -33,6 +56,12 @@
 		font-family: Raleway, sans-serif;
 
 		color: #fff;
+
+		margin: 0 -10px;
+
+		&-item {
+			margin: 0 10px;
+		}
 	}
 
 	&__text-score {
@@ -43,7 +72,7 @@
 		font-size: 20px;
 	}
 
-	&__refresh {
+	&__btn {
 		background-color: transparent;
 
 		color: inherit;
@@ -59,7 +88,7 @@
 	}
 
 	&__body {
-		padding: 5px 30px;
+		padding: 15px 30px;
 	}
 
 	&__list {
@@ -85,5 +114,25 @@
 
 	&__value {
 		font-weight: 700;
+	}
+}
+
+@media (max-width: 730px) {
+	.game-card {
+		&__btn-text {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 592px) {
+	.game-card {
+		&__text-score {
+			width: 100%;
+
+			order: 10;
+
+			text-align: center;
+		}
 	}
 }
