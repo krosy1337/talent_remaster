@@ -877,7 +877,7 @@ button:active {
 
 .tooltip__content {
   position: absolute;
-  left: 50%;
+  left: 200%;
   top: 100%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -888,11 +888,7 @@ button:active {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
-  background-color: var(--color-ff);
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-  border-radius: 11px;
-  width: 360px;
+  z-index: 1;
 }
 
 .tooltip:hover .tooltip__content {
@@ -916,8 +912,20 @@ button:active {
   width: 45px;
 }
 
+.tooltip__image + .tooltip__image {
+  margin-left: 20px;
+}
+
 .tooltip__inner {
   padding: 15px;
+  background-color: var(--color-ff);
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  border-radius: 11px;
+  width: 360px;
+}
+
+.tooltip__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -927,6 +935,12 @@ button:active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.tooltip__text {
+  color: var(--color-44);
+  font-family: Inter, sans-serif;
+  font-size: 16px;
 }
 
 body {
