@@ -171,6 +171,10 @@
 	&__logout {
 		flex-shrink: 0;
 
+		background-color: transparent;
+
+		padding: 0;
+
 		cursor: pointer;
 	}
 }

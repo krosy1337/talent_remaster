@@ -644,6 +644,8 @@ button:active {
 .user__logout {
   -ms-flex-negative: 0;
       flex-shrink: 0;
+  background-color: transparent;
+  padding: 0;
   cursor: pointer;
 }
 
