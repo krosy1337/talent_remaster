@@ -7,6 +7,19 @@ html.light-theme {
   --color-00: #000000;
   --color-5e: #5e5e5e;
   --color-f5: #f5f5f5;
+  --color-footer: #0e1d27;
+}
+
+html.dark-theme {
+  --color-bg: #0e1d27;
+  --color-1c: #c7c7c7;
+  --color-ff: #101621;
+  --color-44: #a3a3a3;
+  --color-c4: #c4c4c4;
+  --color-00: #c7c7c7;
+  --color-5e: #5e5e5e;
+  --color-f5: #f5f5f5;
+  --color-footer: #000f17;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -688,7 +701,7 @@ button:active {
   font-weight: 700;
   margin: 0;
   padding: 0;
-  color: inherit;
+  color: #fff;
   margin-bottom: 5px;
 }
 
@@ -862,6 +875,10 @@ button:active {
 
 .modal__account-icon-wrapper {
   width: 60px;
+}
+
+.modal__account-name {
+  color: var(--color-00);
 }
 
 .modal__account-link {
@@ -1340,7 +1357,7 @@ body.lock {
 }
 
 .footer {
-  background-color: #0E1D27;
+  background-color: var(--color-footer);
   min-height: 180px;
   font-family: 'Inter', sans-serif;
   overflow: hidden;
