@@ -8,6 +8,7 @@ html.light-theme {
   --color-5e: #5e5e5e;
   --color-f5: #f5f5f5;
   --color-footer: #0e1d27;
+  --color-2c: #2c2c2c;
 }
 
 html.dark-theme {
@@ -994,6 +995,7 @@ body.lock {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .layout {

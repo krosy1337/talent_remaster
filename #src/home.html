@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html class="light-theme" lang="ru">
+
+<head>
+    <title>Добро пожаловать</title>
+
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="css/home.min.css">
+
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script type="module" src="js/script.min.js" defer></script>
+</head>
+<body>
+<div class="wrapper">
+    <main class="main">
+        <div class="main__inner">
+            <div class="container">
+                <img class="main__bg-figure main__bg-figure_1" src="img/1.svg" alt="figure">
+                <img class="main__bg-figure main__bg-figure_2" src="img/2.svg" alt="figure">
+                <img class="main__bg-figure main__bg-figure_3" src="img/3.svg" alt="figure">
+            </div>
+
+            @@include('parts/_home-content.html')
+
+        </div>
+    </main>
+    @@include('parts/_footer.html')
+</div>
+</body>
+</html>
